@@ -1,0 +1,3 @@
+[submodule "Dissertate_gen"]
+	path = Dissertate_gen
+	url = https://github.com/suchow/Dissertate.git
