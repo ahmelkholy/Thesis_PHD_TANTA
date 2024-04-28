@@ -1,0 +1,91 @@
+\documentclass{0.asset/Tanta}
+
+\begin{document}
+% $$$$$$$$$$$$$$$$$  Start of Thesis Front matter   $$$$$$$$$$$$$$
+\include{1.Front_matter/Title}
+
+\newpage
+
+\chaptertitlefont{\fontsize{14}{15}\selectfont\centering}
+
+\include{1.Front_matter/Abstract}  % include your abstract file
+\include{1.Front_matter/Acknowledgment}  % include your Acknowledgement file
+
+\begin{onehalfspacing}%To make the table of contents, figures, and tables single spaced, as required by the formatting guidelines, pg. 24.
+
+	%\renewcommand{\contentsname}{\textbf{{\large TABLE OF CONTENTS}}}
+	\tableofcontents
+	% Maybe we don't need this blank page.
+	\cleardoublepage
+
+	\printglossary[type=\acronymtype,style=long3col, title=\centerline{LIST OF ABBREVIATIONS}, toctitle=List of Abbreviations, nonumberlist=true]
+
+	\printglossary[type=symbols,style=long3col, title=\centerline{LIST OF SYMBOLS}, toctitle=List of Symbols, nonumberlist=true]
+
+	% adding list of figures
+	% adding list of figures
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listfigurename} % <--- change here
+	\renewcommand*\listfigurename{LIST OF FIGURES}
+	\listoffigures
+
+	% adding list of tables
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listtablename}  % <---- and change here too.
+	\renewcommand*\listtablename{LIST OF TABLES}
+	\listoftables
+
+\end{onehalfspacing}
+% \printglossary[style=altlist,title=Nomenclature, toctitle=Nomenclature, nonumberlist=true] 
+% $$$$$$$$$$$$$$$$$  Thesis front matter ends   $$$$$$$$$$$$$$
+
+
+% $$$$$$$$$$$$$$$$$  include your separate chapters   $$$$$$$$$$$$$$
+% Remove the centering of chapter name.
+\chaptertitlefont{\fontsize{14}{15}\selectfont}  % <------ Add this line
+
+\include{2.Chapters/Chapter_1}
+\include{2.Chapters/Chapter_2}
+\include{2.Chapters/Chapter_3}
+\include{2.Chapters/Chapter_4}
+\include{2.Chapters/Chapter_5}
+\include{2.Chapters/Conclusion}
+
+
+% $$$$$$$$$$$$$$$$$  Reference style  Starts $$$$$$$$$$$$$$
+
+\begin{onehalfspacing}
+	\renewcommand*\bibname{\centerline{REFERENCES}}
+	\phantomsection
+	\addcontentsline{toc}{chapter}{References}
+	\newcommand{\BIBdecl}{\setlength{\itemsep}{0pt}}%To control space between bibliography entries
+	\bibliographystyle{IEEEtran}
+	\bibliography{0.asset/library}
+\end{onehalfspacing}
+
+% $$$$$$$$$$$$$$$$$  Reference style Ends  $$$$$$$$$$$$$$
+
+
+% $$$$$$$$$$$$$$$$$  include Appendices   $$$$$$$$$$$$$$
+
+\appendix
+\newpage
+\begingroup
+\let\clearpage\relax
+\begin{center}
+	\vspace*{2\baselineskip}
+	{ \textbf{{\large APPENDICES}}}
+	% Fixes the numbering of "new" section created with "\addcontentsline."
+	% You need to add the "\phantomsection" before *every* "\addcontentsline."
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Appendices}
+\end{center}
+\include{3.appendices/Appendix_A}
+\include{3.appendices/Appendix_B}
+\include{4.Back_matter/Papers}
+\endgroup
+% $$$$$$$$$$$$$$$$$  Appendix ends  $$$$$$$$$$$$$$
+
+\end{document}
