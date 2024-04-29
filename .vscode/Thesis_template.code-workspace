@@ -7,45 +7,5 @@
 		 	"path": "../../../PROJECT-PHD-Thesis"
 		}
 	],
-	"settings":
-{
- "latex-workshop.latex.recipes": [
-  {
-   "name": "pdflatex ➞ bibtex ➞ makeglossaries ➞ pdflatex ➞ pdflatex",
-   "tools": [
-    "pdflatex",
-    "bibtex",
-    "makeglossaries",
-    "pdflatex",
-    "pdflatex"
-   ]
-  }
- ],
- "latex-workshop.latex.tools": [
-  {
-   "name": "pdflatex",
-   "command": "pdflatex",
-   "args": [
-    "-synctex=1",
-    "-interaction=nonstopmode",
-    "-file-line-error",
-    "%DOC%"
-   ]
-  },
-  {
-   "name": "bibtex",
-   "command": "bibtex",
-   "args": [
-    "%DOCFILE%"
-   ]
-  },
-  {
-   "name": "makeglossaries",
-   "command": "makeglossaries",
-   "args": [
-    "%DOCFILE%"
-   ]
-  }
- ]
-}
+	"settings":{}
 }
