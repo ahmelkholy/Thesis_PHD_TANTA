@@ -11,6 +11,9 @@
 *.cb
 *.cb2
 .*.lb
+*.ist
+*.sbl
+*.syl
 
 ## Intermediate documents:
 *.dvi
