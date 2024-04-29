@@ -1,49 +1,10 @@
 \documentclass{0.asset/Tanta} % replace 'myclass' with the name of your .cls file
 \include{1.Front_matter/Lists}
+
 \begin{document}
-
-% $$$$$$$$$$$$$$$$$  Start of Thesis Front matter   $$$$$$$$$$$$$$
-
-%\vspace{10mm}  % vertical space
-\thispagestyle{empty}
-\addvspace{5mm}  % vertical space until length
-
-%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-% make the title page
-\begin{center}
-	\begin{doublespace}
-		{\textbf{{\large Thesis/Dissertation Title}}}%\vfill % Write your thesis title
-	\end{doublespace}
-
-	\vspace{10mm}
-	{Thesis/Dissertation by}\\
-	{Student Name} %\vfill
-
-	\vspace{30mm}
-
-	{ In Partial Fulfillment of the Requirements}\\[12pt]
-	{ For the Degree of}\\[12pt]
-	{Doctor of Philosophy/Masters of Science} \vfill
-	{King Abdullah University of Science and Technology }\\
-	{Thuwal, Kingdom of Saudi Arabia}
-	\vfill
-
-	%\maketitle
-	\begin{onehalfspace}
-		{\copyright Month, Year}\\
-		Student Name\\               % write your First name second name
-		All rights reserved\\
-
-		\orcid{} \small \href{https://orcid.org/0000-0001-2345-6789}{https://orcid.org/0000-0001-2345-6789}\\
-	\end{onehalfspace}
-
-\end{center}
-
-% end of title page
+\include{1.Front_matter/Title}
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 \newpage
-
 %$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 %
@@ -98,7 +59,6 @@
 \include{2.Chapters/Chapter_5}
 \include{2.Chapters/Conclusion}
 
-
 % $$$$$$$$$$$$$$$$$  Reference style  Starts $$$$$$$$$$$$$$
 
 \begin{onehalfspacing}
@@ -107,11 +67,11 @@
 	\addcontentsline{toc}{chapter}{References}
 	\newcommand{\BIBdecl}{\setlength{\itemsep}{0pt}}%To control space between bibliography entries
 	\bibliographystyle{IEEEtran}
-	\bibliography{References}
-	\bibliography{0.asset/library}
+	\bibliography{References,0.asset/library}
 \end{onehalfspacing}
 
 % $$$$$$$$$$$$$$$$$  Reference style Ends  $$$$$$$$$$$$$$
+
 
 
 % $$$$$$$$$$$$$$$$$  include Appendices   $$$$$$$$$$$$$$

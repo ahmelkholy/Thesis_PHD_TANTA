@@ -8,13 +8,15 @@
 		}
 	],
 	"settings":
-	{
+{
  "latex-workshop.latex.recipes": [
   {
-   "name": "pdflatex ➞ makeglossaries ➞ pdflatex`",
+   "name": "pdflatex ➞ bibtex ➞ makeglossaries ➞ pdflatex ➞ pdflatex",
    "tools": [
     "pdflatex",
+    "bibtex",
     "makeglossaries",
+    "pdflatex",
     "pdflatex"
    ]
   }
@@ -28,6 +30,13 @@
     "-interaction=nonstopmode",
     "-file-line-error",
     "%DOC%"
+   ]
+  },
+  {
+   "name": "bibtex",
+   "command": "bibtex",
+   "args": [
+    "%DOCFILE%"
    ]
   },
   {
