@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{myclass}[2023/06/19 My custom class]
+\ProvidesClass{myclass}[2024/04/29 My custom class]
 
 \LoadClass[onecolumn, 12 pt, doublespace, fullpage, a4paper]{report}
 \renewcommand{\baselinestretch}{1.75} % baseline stretch
@@ -21,7 +21,6 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
 \RequirePackage{graphics}
-% \usepackage{hyperref} % if you want to highlight the links
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{latexsym,amsfonts}
 \RequirePackage{longtable}
@@ -40,7 +39,6 @@
 \RequirePackage{wrapfig} 
 \RequirePackage{wasysym} 
 \RequirePackage{xcolor}
-\RequirePackage{siunitx}
 
 % you can define your most used synonyms/acronyms
 \def\Tanta {Tanta University}
@@ -62,13 +60,11 @@
 \def\kwhm{kWh.m$ ^{-3} $}
 \def\LMH{kg.m$^{-2}$h$^{-1}$}
 
-
 % Changing chapters' headings and subheadings to size 14
 \chapterfont{\fontsize{14}{15}\selectfont}   % font size and baseline stretch
 \sectionfont{\fontsize{14}{15}\selectfont}
 \subsectionfont{\fontsize{14}{15}\selectfont}
 \subsubsectionfont{\fontsize{14}{15}\selectfont}
-
 
 \pagestyle{fancy} % adds a line at the top of every page, except title-page
 \fancyhead{} \fancyfoot{} % for header and footer
@@ -78,26 +74,18 @@
 \fancyheadoffset[L]{0.01mm}
 \renewcommand{\headrulewidth}{0pt}
 
-
 %The following code changes the empty vertical space above a new chapter title. It sets it from 50pt to 20pt
 \makeatletter
 \patchcmd{\@makechapterhead}{50\p@}{20pt}{}{}
 \patchcmd{\@makeschapterhead}{50\p@}{20pt}{}{}
 \makeatother
-%end of modification
-
-
 
 % The following code redefines the plain pagestyle with the objective of moving the page number from the bottom to the top of the page. This only affects new chapter pages.
 \fancypagestyle{plain}{
- \fancyhf{} %clear all header and footer fields
- \fancyhead[C]{\thepage} %puts number on top center of the page
- \renewcommand{\headrulewidth}{0pt}
- \renewcommand{\footrulewidth}{0pt}}
-%ending of plain pagestyle modification.
-
-
-
+\fancyhf{} %clear all header and footer fields
+\fancyhead[C]{\thepage} %puts number on top center of the page
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
 
 % ### Nomenclature, List of Abbreviations and List of Symbols 
 \RequirePackage{ifthen,xkeyval,xfor,amsgen}
@@ -106,17 +94,6 @@
 
 \makeglossaries
 
-\include{Lists}
-% Run the following three lines in the command line to get the lists
-%makeindex -s Thesis.ist -t Thesis.alg -o Thesis.acr Thesis.acn
-%makeindex -s Thesis.ist -t Thesis.slg -o Thesis.syi Thesis.sbl
-%makeindex -s Thesis.ist -t Thesis.glg -o Thesis.gls Thesis.glo
-
-% ### End of addition
-
-
-
-
 % Modified commands
 \newcommand{\Tab}{\hspace{2ex}}
 \RequirePackage[lmargin=40mm, rmargin=25mm, vmargin=25mm, headsep=2.5mm]{geometry}
@@ -124,5 +101,4 @@
 \newcommand{\unicode}[1]{{}}
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand\bibname{\centering BIBLIOGRAPHY}
-%\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
 \newcommand{\orcid}{\includegraphics[width=8pt]{0.asset/ORCID}} % ORCID ID
