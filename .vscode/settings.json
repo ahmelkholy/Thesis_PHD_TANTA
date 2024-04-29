@@ -1,14 +1,4 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-		 	"path": "../../../PROJECT-PHD-Thesis"
-		}
-	],
-	"settings":
-	{
  "latex-workshop.latex.recipes": [
   {
    "name": "pdflatex ➞ makeglossaries ➞ pdflatex`",
@@ -38,5 +28,4 @@
    ]
   }
  ]
-}
 }
