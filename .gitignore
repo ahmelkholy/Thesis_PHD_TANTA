@@ -11,9 +11,16 @@
 *.cb
 *.cb2
 .*.lb
+<<<<<<< HEAD
 *.ist
 *.sbl
 *.syl
+||||||| parent of 1524994 ("regular automatic update")
+=======
+*.ist
+*.sbl
+*.pdf
+>>>>>>> 1524994 ("regular automatic update")
 
 ## Intermediate documents:
 *.dvi
